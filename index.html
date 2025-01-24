@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaikh Hamza Portfolio</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Hamburger Icon -->
+            <div class="hamburger">
+                <button class="btn bars" id="hamburger-btn">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar p-4" id="sidebar">
+                <div class="text-center mb-4">
+                    <img src="./assets/images/man.jpg" class="img-fluid rounded-circle mb-2" alt="Profile" width="100">
+                    <h4 class="name"><em>Shaikh Hamza</em></h4>
+                    <p>Web Developer</p>
+                    <div class="d-flex justify-content-center icons">
+                        <a href="#" class="btn btn-outline-light btn-sm mx-1" onclick="showAlert('Facebook')"><i class="fa fa-facebook-official"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm mx-1" onclick="showAlert('Intsgram')"><i class="fa fa-instagram"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm mx-1" onclick="showAlert('Twitter')"><i class="fa fa-twitter"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm mx-1" onclick="showAlert('Linkedin')"><i class="fa fa-linkedin-square"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <ul class="nav flex-column py-5">
+                    <li class="nav-item mb-2">
+                        <a href="#about" class="nav-link">
+                            <i class="fa fa-user mx-2" aria-hidden="true"></i> About Me
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#portfolio" class="nav-link">
+                            <i class="fa fa-folder mx-2" aria-hidden="true"></i> Portfolio
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#services" class="nav-link">
+                            <i class="fa fa-cogs mx-2" aria-hidden="true"></i> Services
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="cv.pdf" class="nav-link" target="_blank">
+                            <i class="fa fa-file-text mx-2" aria-hidden="true"></i> Resume
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#contact" class="nav-link">
+                            <i class="fa fa-envelope mx-2" aria-hidden="true"></i> Contact
+                        </a>
+                    </li>
+
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link" onclick="toggleDarkMode(event)">
+                            <i class="fa fa-adjust mx-2" aria-hidden="true"></i> Dark/Light Mode
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-lg-10 col-md-8 col-sm-8 main-content">
+                <section class="banner">
+                    <div class="row">
+                        <div class="col-lg-7 col-md-12 col-sm-12 p-5">
+                            <h3 class="fw-lighter mb-3">Hello my name is <span class="name"><em>Shaikh Hamza</em></span>
+                            </h3>
+                            <!-- <h3 class="display-6 text-primary fw-bold">I am a Web developer</h3> -->
+                            <h3 class="display-6 fw-bold  mb-3">
+                                <span>I am a</span>
+                                <span id="animated-text"></span>
+                            </h3>
+                            <p>Hello! I'm <span class="name"><em>Shaikh Hamza</em></span>, a passionate Frontend
+                                Developer skilled in creating responsive
+                                and visually appealing websites using HTML, CSS, JavaScript, and Figma. With expertise
+                                as a Web Designer, PHP Developer, and C# Developer, I also have experience in full-stack
+                                development, enabling me to deliver end-to-end solutions. My creative approach and
+                                technical proficiency make me adept at crafting intuitive user experiences and bringing
+                                innovative ideas to life.
+
+                            </p>
+                            <div class="mt-4">
+                                <a href="cv.pdf" class="btn btn-primary px-3 me-2 py-2 rounded-pill" target="_blank">
+                                    <i class="fa fa-arrow-right ms-2 mx-2 text-light" aria-hidden="true"></i>
+                                    View Resume
+                                </a>
+                                <a href="cv.pdf" class="btn btn-dark px-3 me-2 py-2 rounded-pill" download="">
+                                    <i class="fa fa-id-card-o ms-2 mx-2 text-light" aria-hidden="true"></i>
+                                    Download CV
+                                </a>
+                            </div>
+                            <!-- <div class="mt-5">
+                                <div class="row align-items-center gap-3">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 d-flex flex-column">
+                                        <h2 class="display-5 text-primary fw-bold">5</h2>
+                                        <p class="text">Years of Experience</p>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 d-flex flex-column">
+                                        <h2 class="display-5 text-primary fw-bold">6</h2>
+                                        <p class="text">Projects Completed</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 d-flex flex-column">
+                                        <h2 class="display-5 text-primary fw-bold">6k</h2>
+                                        <p class="text">Clients Worldwide</p>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+
+                        <div class="col-lg-5 col-md-12 col-sm-12 d-flex justify-content-center align-items-center">
+                            <div class="w-100 d-flex align-items-center justify-content-center m-auto">
+                                <div class="image-container m-5">
+                                    <figure>
+                                        <img class="img-fluid" src="./assets/images/banner-img.png" alt="" width="250px"
+                                            height="250px">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="about-section py-5" id="about">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class="fw-bold custom-underline"><em>About Me</em></h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="mt-4">Shaikh Hamza</h2>
+                                <p>I'm a passionate web developer with a strong focus on building responsive and
+                                    user-friendly websites. With years of experience in creating dynamic web
+                                    applications, I am dedicated to delivering high-quality solutions that prioritize
+                                    both functionality and user experience. I thrive on learning new technologies and
+                                    continuously improving my skills to tackle challenges and bring innovative ideas to
+                                    life.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 about-text py-5">
+                                <div>
+                                    <div class="detail-item border-bottom border-secondary pt-2 py-1 fs-6"><span>Date of
+                                            Birth:</span> <span>01 Feburary 2005</span></div>
+                                    <div class="detail-item border-bottom border-secondary pt-2 py-1 fs-6">
+                                        <span>Age:</span> <span>19</span>
+                                    </div>
+                                    <div class="detail-item border-bottom border-secondary pt-2 py-1 fs-6">
+                                        <span>Website:</span> <span><a
+                                                href="https://alifarooqi01.github.io/portfolio/">Portfolio</a></span>
+                                    </div>
+                                    <div class="detail-item border-bottom border-secondary pt-2 py-1 fs-6">
+                                        <span>Email:</span> <span>hamza98.dev@gmail.com</span>
+                                    </div>
+                                    <div class="detail-item border-bottom border-secondary pt-2 py-1 fs-6">
+                                        <span>Phone:</span> <span>+92 3101132039</span>
+                                    </div>
+                                    <div class="detail-item border-bottom border-secondary pt-2 py-1 fs-6">
+                                        <span>Freelance:</span> <span>Available</span>
+                                    </div>
+                                </div>
+                                <a href="#con" class="btn-hire mt-4">Hire Me</a>
+                            </div>
+
+                            <div class="col-md-6 skills py-5">
+                                <h6 class="fw-bold">Html/CSS</h6>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 85%;"></div>
+                                </div>
+                                <h6 class="fw-bold">JavaScript</h6>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 76%;"></div>
+                                </div>
+                                <h6 class="fw-bold">Bootstrap</h6>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 80%;"></div>
+                                </div>
+                                <h6 class="fw-bold">Figma/PhotoShop</h6>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 60%;"></div>
+                                </div>
+                                <h6 class="fw-bold">PHP</h6>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 79%;"></div>
+                                </div>
+                                <h6 class="fw-bold">C#</h6>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 50%;"></div>
+                                </div>
+                                <h6 class="fw-bold">ASP.NET CORE</h6>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 72%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="portfolio-section py-5" id="portfolio">
+                    <h1 class="portfolio-title">My Portfolio</h1>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <!-- Portfolio Card 1 -->
+                            <div class="col-md-6 col-sm-6 mb-4 column">
+                                <div class="portfolio-card">
+                                    <div class="image-container">
+                                        <img src="./assets/images/artifical-inteligence.png" alt="Project 1">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4><em>Artificial Intelligence</em></h4>
+                                        <p class="fs-6"><strong>Programming Language:</strong> HTML, CSS, JavaScript, Bootstrap</p>
+                                        <p>An informative website dedicated to providing insights into artificial intelligence concepts, applications, and recent advancements in the field.</p>
+                                        <a href="https://alifarooqi01.github.io/Artificial-intelligence/"
+                                            class="btn-portfolio" target="_blank">View Project</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Portfolio Card 2 -->
+                            <div class="col-md-6 col-sm-6 mb-4 column">
+                                <div class="portfolio-card">
+                                    <div class="image-container">
+                                        <img src="./assets/images/store.png" alt="Project 1">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4><em>Store</em></h4>
+                                        <p class="fs-6"><strong>Programming Language:</strong> HTML, CSS, JavaScript, Bootstrap</p>
+                                        <p>A single-page website developed for a store, featuring product listings, interactive elements, and a user-friendly layout using modern web technologies.</p>
+                                        <a href="https://hamza-code11.github.io/Store/" class="btn-portfolio"
+                                            target="_blank">View Project</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Portfolio Card 3 -->
+                            <div class="col-md-6 col-sm-6 mb-4 column">
+                                <div class="portfolio-card">
+                                    <div class="image-container">
+                                        <img src="./assets/images/online-help-desk.png" alt="Project 1">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4><em>Online Help Desk</em></h4>
+                                        <p class="fs-6"><strong>Programming Language:</strong>HTML, CSS, JavaScript, Bootstrap, C#, ASP.NET Core MVC</p>
+                                        <p>A web application for institutions to manage student complaints and requests, with an admin dashboard for tracking and status updates.</p>
+                                        <a href="http://onlinehelpdesk.somee.com/" class="btn-portfolio"
+                                            target="_blank">View Project</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Portfolio Card 4 -->
+                            <div class="col-md-6 col-sm-6 mb-4 column">
+                                <div class="portfolio-card">
+                                    <div class="image-container">
+                                        <img src="./assets/images/metalwallart.png" alt="Project 1">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4><em>JENSEN DECORATIVE</em></h4>
+                                        <p class="fs-6"><strong>Programming Language:</strong>HTML, CSS, Bootstrap</p>
+                                        <p>A simple website showcasing various types of metal art, including door, mirror art, photo frame art, and wall shelves.</p>
+                                        <a href="https://alifarooqi01.github.io/Eproject/" class="btn-portfolio"
+                                            target="_blank">View Project</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Portfolio Card 5 -->
+                            <div class="col-md-6 col-sm-6 mb-4 column">
+                                <div class="portfolio-card">
+                                    <div class="image-container">
+                                        <img src="./assets/images/kfc.jpg" alt="Project 1">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4><em>KFC Clone</em></h4>
+                                        <p class="fs-6"><strong>Programming Language:</strong>HTML, CSS, JavaScript, Bootstrap</p>
+                                        <p> A KFC website replica built to showcase web development skills with a focus on design and layout.</p>
+                                        <a href="https://brave-franklin-8ad243.netlify.app/" class="btn-portfolio"
+                                            target="_blank">View Project</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Portfolio Card 6 -->
+                            <div class="col-md-6 col-sm-6 mb-4 column">
+                                <div class="portfolio-card">
+                                    <div class="image-container">
+                                        <img src="./assets/images/portfolio.png" alt="Project 1">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4><em>Personal Portfolio</em></h4>
+                                        <p class="fs-6"><strong>Programming Language:</strong> HTML, CSS, JavaScript, Bootstrap</p>
+                                        <p> A portfolio website showcasing projects, skills, and achievements, with a dedicated section for highlighting the portfolio itself.</p>
+                                        <a href="#" class="btn-portfolio" target="_blank">View Project</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="services">
+                    <div class="container skills py-5">
+                        <h2>My Services</h2>
+                        <div class="card-row">
+                            <div class="card-container">
+
+                                <!-- HTML/CSS -->
+                                <div class="card service-box">
+                                    <div class="card-body">
+                                        <i class="fab fa-html5"></i>
+                                        <h4 class="card-title">HTML / CSS</h4>
+                                        <p class="card-text">Learn how to structure web pages and create semantic,
+                                            accessible HTML and CSS styles.</p>
+                                    </div>
+                                </div>
+
+                                <!-- JavaScript -->
+                                <div class="card service-box">
+                                    <div class="card-body">
+                                        <i class="fab fa-js"></i>
+                                        <h4 class="card-title">JavaScript</h4>
+                                        <p class="card-text">Master JavaScript to build dynamic, responsive websites and
+                                            interactive applications.</p>
+                                    </div>
+                                </div>
+
+                                <!-- UI/UX Design -->
+                                <div class="card service-box">
+                                    <div class="card-body">
+                                        <i class="fas fa-pencil-ruler"></i>
+                                        <h4 class="card-title">UI/UX Design</h4>
+                                        <p class="card-text">Design engaging user interfaces and experiences that
+                                            elevate usability.</p>
+                                    </div>
+                                </div>
+
+
+                                <!-- PHP Development -->
+                                <div class="card service-box">
+                                    <div class="card-body">
+                                        <i class="fab fa-php" style="margin: -5px;"></i>
+                                        <h4 class="card-title">PHP Development</h4>
+                                        <p class="card-text">Develop robust and scalable web applications using PHP
+                                            tailored to meet your business requirements.</p>
+                                    </div>
+                                </div>
+
+                                <!-- C# Development -->
+                                <div class="card service-box">
+                                    <div class="card-body">
+                                        <i class="fas fa-code" style="margin: -5px;"></i>
+                                        <h4 class="card-title">C# Development</h4>
+                                        <p class="card-text">Empower your software with efficient and scalable solutions
+                                            built using C# programming.</p>
+                                    </div>
+                                </div>
+
+                                <!-- ASP.NET Core -->
+                                <div class="card service-box">
+                                    <div class="card-body">
+                                        <i class="fab fa-microsoft"></i>
+                                        <h4 class="card-title">ASP.NET Core</h4>
+                                        <p class="card-text">Build dynamic, cross-platform web applications with ASP.NET
+                                            Core, ensuring scalability and performance.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+
+                <div class="Contact-Section" id="contact">
+                    <div class="container-fluid my-5" id="con">
+                        <h2 class="text-center text-uppercase mb-5 fw-bolder">Contact With Me</h2>
+                        <div class="row d-flex justify-content-center align-items-stretch">
+                            <!-- Contact Info -->
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <div class="card text-light shadow h-100">
+                                    <img src="./assets/images/hands.jpg" class="card-img-top p-4" alt="Contact Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Web Developer</h5>
+                                        <h3 class="name"><em>Shaikh Hamza</em></h3>
+                                        <p>Available for hire! Contact me via email or call to discuss opportunities.
+                                        </p>
+                                        <p><i class="fas fa-phone"></i> 0310-1132039</p>
+                                        <p><i class="fas fa-envelope"></i> hamza98.dev@gmail.com</p>
+                                        <div class="d-flex iconss">
+                                            <a href="#" class="btn btn-sm mx-1" onclick="showAlert('Twitter')"><i class="fa fa-twitter"></i></a>
+                                            <a href="#" class="btn btn-sm mx-1" onclick="showAlert('Linkedin')"><i class="fa fa-linkedin"></i></a>
+                                            <a href="#" class="btn btn-sm mx-1" onclick="showAlert('GitHub')"><i class="fa fa-github"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Contact Form -->
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="card text-light shadow h-100">
+                                    <div class="card-body input-section">
+                                        <form id="contact-form">
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="name" class="form-label">Your Name</label>
+                                                    <input name="name" id="name" type="text" class="form-control in"
+                                                        placeholder="Your Name" required>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="phone" class="form-label">Phone Number</label>
+                                                    <input name="num" id="num" type="text" class="form-control in"
+                                                        placeholder="Phone Number" required>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="email" class="form-label">Email</label>
+                                                <input name="email" id="email" type="email" class="form-control in"
+                                                    id="email" placeholder="Email" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="subject" class="form-label">Subject</label>
+                                                <input name="subject" id="subject" type="text" class="form-control in"
+                                                    id="subject" placeholder="Subject" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="message" class="form-label">Your Message</label>
+                                                <textarea name="message" id="message" class="form-control in"
+                                                    id="message" rows="6" placeholder="Your Message"
+                                                    required></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary w-100">Hire me</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- /////// Side Bar /////// -->
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+
+        hamburgerBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('show');
+        });
+    </script>
+
+    <!-- /////// Dark/Light Mode /////// -->
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+
+    <!-- /////// Text Animate /////// -->
+    <script>
+        const roles = [
+            "Web Developer",
+            "Web Designer",
+            "Frontend Developer",
+            "Figma Designer",
+            "PHP Developer",
+            "C# Developer",
+            "Full Stack Developer"
+        ];
+        let i = 0, j = 0;
+        const span = document.getElementById("animated-text");
+
+        function typeEffect() {
+            if (j < roles[i].length) {
+                span.textContent += roles[i][j];
+                j++;
+                setTimeout(typeEffect, 100);
+            } else {
+                setTimeout(() => {
+                    eraseEffect();
+                }, 2000); // Delay before erasing
+            }
+        }
+
+        function eraseEffect() {
+            if (j > 0) {
+                span.textContent = span.textContent.slice(0, -1);
+                j--;
+                setTimeout(eraseEffect, 50);
+            } else {
+                i = (i + 1) % roles.length;
+                setTimeout(typeEffect, 500); // Delay before typing the next role
+            }
+        }
+
+        typeEffect();
+    </script>
+
+    <!-- /////// Email Configuration JS /////// -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const form = this;
+            const submitButton = form.querySelector('button[type="submit"]');
+            submitButton.disabled = true; // Disable button during submission
+            submitButton.innerHTML = 'Sending...';
+    
+            emailjs.sendForm('service_8bciohj', 'template_jlu4ztc', form)
+                .then(function (response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    showToast('Email sent successfully!', 'success');
+                    form.reset();
+                }, function (error) {
+                    console.log('FAILED...', error);
+                    showToast('Email failed to send.', 'danger');
+                })
+                .finally(() => {
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = 'Hire me';
+                });
+        });
+    
+        (function () {
+            emailjs.init("bepvi6rjjmfLShHCK");
+        })();
+    
+        // Function to show toast notifications
+        function showToast(message, type) {
+            const toast = document.createElement('div');
+            toast.className = `alert alert-${type} position-fixed bottom-0 end-0 m-3`;
+            toast.style.zIndex = 1050;
+            toast.innerHTML = message;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 3000);
+        }
+    </script>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

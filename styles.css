@@ -1,0 +1,550 @@
+/* Index Page */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Playwrite+NZ+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+ }
+:root {
+    --bg-color: #f2f2fc;
+    --sidebar-color: #fdf9ff;
+    --heading-color: #1f6feb;
+    --text-color: #495057;
+    --btn-bg-color: #007bff; 
+    --btn-text-color: #ffffff;
+    --card-bg-color: #f9f9f9;
+    --text-color: #333; 
+    --border-color: #ccc;
+    --background-color: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.1);  
+
+    transition: all 0.3s ease;
+}
+
+/* Dark mode styles */
+.dark-mode {
+    --bg-color: #151515;
+    --sidebar-color: #222222;
+    --heading-color: #f4f4f4;
+    --text-color: #ffffff;
+    --btn-bg-color: #1f6feb;
+    --btn-text-color: #ffffff;
+    --card-bg-color: #1e1e1e;
+    --input-bg-color: #1e1e1e;
+    --shadow-color: rgba(255, 255, 255, 0.1); 
+
+    --text-color: #e0e0e0; 
+    --border-color: #555;
+    --background-color: #1a1a1a;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    transition: color 0.3s ease;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* background: linear-gradient(135deg, #1e293b, #0f172a); */
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.sidebar {
+    height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.banner .d-flex div h1 {
+    color: var(--heading-color);
+}
+
+/* Sidebar fixed position */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: var(--sidebar-color); 
+    padding-top: 20px;
+    overflow-y: auto;
+    z-index: 999;
+    color: var(--text-color);
+}
+.sidebar li a{
+    color: var(--text-color);
+}
+.main-content {
+    margin-left: 250px;
+    /* Offset main content for sidebar */
+    padding-top: 100px;
+    overflow-y: auto;
+}
+
+.hamburger {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+}
+
+.hamburger .bars{
+    background-color: var(--card-bg-color);
+    position: fixed;
+}
+
+
+/* Sidebar styling */
+
+.sidebar .icons a{
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+.sidebar .icons a:hover{
+    background-color: transparent;
+}
+.sidebar .nav-item {
+    margin-bottom: 15px;
+}
+
+.sidebar .nav-link {
+    color: var(--text-color); 
+    text-decoration: none;
+}
+
+.sidebar .nav-link:hover {
+    color: #007bff;
+}
+
+/* Styles for larger screens */
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        /* Hide the sidebar off-screen initially */
+        width: 250px;
+        transition: left 0.3s ease;
+    }
+
+    .sidebar.show {
+        left: 0;
+        /* Show the sidebar when toggled */
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 1050;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding-top: 80px;
+        /* Adjust padding when sidebar is hidden */
+    }
+}
+
+/* Animation for image-container */
+.banner .image-container {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin: auto;
+}
+
+.banner .image-container img {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.name{
+    font-family: "Clicker Script", cursive;
+    font-weight: 300;
+    font-style: normal;
+    color: var(--text-color);
+}
+
+/* banner section */
+
+.banner p{
+    color: var(--text-color);
+}
+.banner .text{
+    color: var(--text-color);
+    font-size: 0.8rem
+}
+.banner h3{
+    color: var(--text-color);
+}
+.banner h3 #animated-text{
+    color: var(--heading-color);
+}
+
+
+
+
+
+
+
+/* about section */
+
+.about-section {
+    background: transparent;
+    border-radius: 15px;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); */
+    padding: 20px;
+}
+.about-section h2, p{
+    color: var(--text-color);
+}
+
+.about-section .about-text h1 {
+    font-size: 2rem;
+    color: var(--heading-color);
+}
+.about-section h3 em{
+    color: var(--text-color);
+}
+.about-section h6{
+    color: var(--text-color);
+}
+.about-section .about-text p {
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.about-section .detail-item {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-color);
+}
+
+.about-section .btn-hire {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--btn-bg-color);
+    color: var(--btn-text-color);
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.about-section .btn-hire:hover {
+    background: linear-gradient(45deg, #007bff, #6a5acd);
+}
+
+.about-section .skills .progress {
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.about-section .skills .progress-bar {
+    background: linear-gradient(45deg, #007bff, #6a5acd);
+}
+
+.about-section .custom-underline {
+    position: relative;
+    display: inline-block;
+    color: var(--heading-color);
+}
+
+.about-section .custom-underline::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 40%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 4px;
+    background-color: var(--heading-color);
+}
+
+
+
+
+
+
+
+
+/* services section  */
+
+.skills .card-row {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.skills .card-container {
+    display: flex;
+    animation: slide 15s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.skills .card {
+    width: 22%;
+    /* Adjust for 4 cards in a row */
+    margin: 0 10px;
+    flex-shrink: 0;
+}
+
+
+#services h2 {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    color: var(--heading-color);
+    letter-spacing: 5px;
+    font-weight: 700;
+    text-shadow: var(--shadow-color);
+    /* animation: glowing 1.5s ease-in-out infinite alternate; */
+}
+
+/* @keyframes glowing {
+    0% {
+        text-shadow: 0 2px 6px rgba(0, 255, 255, 0.7);
+    }
+
+    100% {
+        text-shadow: 0 0 10px rgba(0, 255, 255, 1), 0 0 50px rgba(0, 255, 255, 0.5);
+    }
+} */
+
+#services .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInUp 2s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#services .service-box {
+    background: var(--card-bg-color);
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--text-color);
+    position: relative;
+}
+
+#services .service-box:hover {
+    box-shadow: var(--shadow-color);
+}
+
+#services .service-box i {
+    font-size: 4rem;
+    color: #1abc9c;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+#services .service-box:hover i {
+    color: var(--btn-bg-color);
+}
+
+#services .service-box h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: var(--heading-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#services .service-box p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+#services .learn-more:hover {
+    color: #ecf0f1;
+    border-bottom: 2px solid #1abc9c;
+}
+
+@media (max-width: 768px) {
+    #services h2 {
+        font-size: 2.5rem;
+    }
+
+    #services .service-box {
+        padding: 20px;
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+/* porfolio section  */
+
+.portfolio-title {
+    font-size: 2.8rem;
+    color: var(--heading-color);
+    margin-bottom: 50px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.portfolio-card {
+    position: relative; 
+    width: 100%;
+    height: 100%;
+    max-width: 450px;
+    /* background: var(--card-bg-color); */
+    border-radius: 12px;
+    box-shadow: var(--shadow-color);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;;
+}
+.card-body a.btn-portfolio {
+    display: inline-block; 
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    color: var(--btn-text-color);
+    background-color: var(--btn-bg-color);
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-color);
+}
+.portfolio-card:hover a{
+    transform: translateX(5%); 
+    transition: transform 0.8s ease;
+    background-color: red;
+    box-shadow: var(--shadow-color);
+}
+.portfolio-card .card-body{
+    margin: 20px;
+}
+
+.portfolio-card h4{
+    color: var(--heading-color);
+    font-weight: 600;
+}
+.portfolio-card p{
+    color: var(--text-color);
+}
+.portfolio-card a{
+    text-decoration: none;
+}
+.portfolio-section .image-container {
+    height: 350px;
+    overflow-y: scroll; /* Add vertical scroll */
+}
+
+.portfolio-card img{
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+}
+
+.btn-portfolio {
+    padding: 10px 20px;
+    background: var(--btn-bg-colorr);
+    color: var(--btn-text-color);
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+
+
+.btn-portfolio:hover {
+    background: linear-gradient(45deg, #007bff, #6a5acd);
+}
+
+.solid {
+    border: 2px solid red;
+}
+
+.column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.Contact-Section .card{
+    background: var(--card-bg-color);
+}
+.Contact-Section h2{
+    color: var(--heading-color);
+}
+
+.Contact-Section .card .input-section .in{
+    border-radius: 5px;             
+    width: 100%;            
+    transition: border-color 0.3s ease; 
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    border: 2px solid var(--border-color);
+    background-color: var(--background-color);
+}
+.Contact-Section .card .input-section .in::placeholder{
+    color: #aaa;
+}
+
+.Contact-Section .card  button:hover {
+    background: linear-gradient(45deg, #007bff, #6a5acd);
+}
+.Contact-Section .card p, label, i{
+    color: var(--text-color);
+}
+.Contact-Section .iconss a{
+    border: 1px solid var(--text-color);
+    text-emphasis: none;
+}
+
+.Contact-Section .card .card-title{
+    color: var(--text-color);
+}
+
+
